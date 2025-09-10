@@ -1,0 +1,16 @@
+{
+  "title": "مدير المنتجات",
+  "sidebar": "الشريط الجانبي (يسار)",
+  "sidebarRight": "الشريط الجانبي (يمين)",
+  "main": "المحتوى الرئيسي هنا.",
+  "changeLang": "تغيير اللغة",
+  "darkMode": "تبديل الوضع الداكن",
+  "profile": "الملف الشخصي",
+  "basicData": "البيانات الأساسية",
+  "classifications": "التصنيفات",
+  "countries": "الدول",
+  "regions": "المناطق",
+  "cities": "المدن",
+  "assetTypes": "أنواع الأصول",
+  "assetStatuses": "حالات الأصول"
+}

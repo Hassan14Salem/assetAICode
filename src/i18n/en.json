@@ -1,0 +1,16 @@
+{
+  "title": "Product Manager",
+  "sidebar": "Sidebar (Left)",
+  "sidebarRight": "Sidebar (Right)",
+  "main": "Main content goes here.",
+  "changeLang": "Change Language",
+  "darkMode": "Toggle Dark Mode",
+  "profile": "Profile",
+  "basicData": "Basic Data",
+  "classifications": "Classifications",
+  "countries": "Countries",
+  "regions": "Regions",
+  "cities": "Cities",
+  "assetTypes": "Asset Types",
+  "assetStatuses": "Asset Statuses"
+}

@@ -1,0 +1,16 @@
+<div *ngIf="asset; else notFound">
+	<h2>Asset Details</h2>
+	<ul class="list-group">
+		<li class="list-group-item"><b>Asset Name:</b> {{ asset.assetName }}</li>
+		<li class="list-group-item"><b>Serial Number:</b> {{ asset.serialNo }}</li>
+		<li class="list-group-item"><b>Asset Type:</b> {{ asset.assetTypeId }}</li>
+		<li class="list-group-item"><b>Asset Status:</b> {{ asset.assetStatusId }}</li>
+		<li class="list-group-item"><b>Company:</b> {{ asset.companyId }}</li>
+		<li class="list-group-item"><b>Date:</b> {{ asset.inspectionDate }}</li>
+		<li class="list-group-item"><b>Manufacturer:</b> {{ asset.manufacturer }}</li>
+		<li class="list-group-item"><b>Quantity:</b> {{ asset.quantity }}</li>
+	</ul>
+</div>
+<ng-template #notFound>
+	<div class="alert alert-danger">Asset not found.</div>
+</ng-template>

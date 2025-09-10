@@ -1,0 +1,34 @@
+<p-confirmDialog></p-confirmDialog>
+<p-table [value]="assets" *ngIf="assets.length > 0" tableStyleClass="p-datatable-bordered table-bordered">
+	<ng-template pTemplate="header">
+		<tr>
+			<th>Asset Name</th>
+			<th>Serial Number</th>
+			<th>Asset Type</th>
+			<th>Asset Status</th>
+			<th>Company</th>
+			<th>Date</th>
+			<th>Manufacturer</th>
+			<th>Quantity</th>
+			<th>Actions</th>
+		</tr>
+	</ng-template>
+	<ng-template pTemplate="body" let-asset let-i="rowIndex">
+		<tr>
+			<td>{{ asset.assetName }}</td>
+			<td>{{ asset.serialNo }}</td>
+			<td>{{ asset.assetTypeId }}</td>
+			<td>{{ asset.assetStatusId }}</td>
+			<td>{{ asset.companyId }}</td>
+			<td>{{ asset.inspectionDate }}</td>
+			<td>{{ asset.manufacturer }}</td>
+			<td>{{ asset.quantity }}</td>
+			<td>
+				<button class="btn btn-sm btn-info me-1" (click)="onView(asset, i)">View</button>
+				<button class="btn btn-sm btn-warning me-1" (click)="onEdit(asset, i)">Edit</button>
+				<button class="btn btn-sm btn-danger" (click)="onDelete(i)">Delete</button>
+			</td>
+		</tr>
+	</ng-template>
+</p-table>
+<div *ngIf="assets.length === 0" class="alert alert-info mt-3">No assets found.</div>

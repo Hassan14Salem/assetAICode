@@ -1,0 +1,49 @@
+<div class="container mt-4">
+	<form [formGroup]="basicInfoForm" (ngSubmit)="onSave()">
+		<div class="row">
+			<div class="col-md-6 mb-3">
+				<label for="assetName" class="form-label">Asset Name</label>
+				<input type="text" id="assetName" class="form-control" formControlName="assetName" required>
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="serialNo" class="form-label">Serial Number</label>
+				<input type="text" id="serialNo" class="form-control" formControlName="serialNo">
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="assetTypeId" class="form-label">Asset Type</label>
+				<select id="assetTypeId" class="form-select" formControlName="assetTypeId">
+					<option [ngValue]="null">Select Type</option>
+					<option *ngFor="let type of assetTypes" [ngValue]="type.id">{{ type.name }}</option>
+				</select>
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="assetStatusId" class="form-label">Asset Status</label>
+				<select id="assetStatusId" class="form-select" formControlName="assetStatusId">
+					<option [ngValue]="null">Select Status</option>
+					<option *ngFor="let status of assetStatus" [ngValue]="status.id">{{ status.name }}</option>
+				</select>
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="companyId" class="form-label">Company</label>
+				<select id="companyId" class="form-select" formControlName="companyId">
+					<option [ngValue]="null">Select Company</option>
+					<option *ngFor="let company of companies" [ngValue]="company.id">{{ company.name }}</option>
+				</select>
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="inspectionDate" class="form-label">Date</label>
+				<input type="date" id="inspectionDate" class="form-control" formControlName="inspectionDate">
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="manufacturer" class="form-label">Manufacturer</label>
+				<input type="text" id="manufacturer" class="form-control" formControlName="manufacturer">
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="quantity" class="form-label">Quantity</label>
+				<input type="number" id="quantity" class="form-control" formControlName="quantity">
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary" >Save</button>
+	</form>
+	<p-toast></p-toast>
+</div>
